@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+    chat:
+        container_name: tripsit_chat
+        build: .
+        restart: always
+        ports:
+            - 9000:9000/tcp
+        volumes:
+            - ./src:/var/opt/thelounge
+

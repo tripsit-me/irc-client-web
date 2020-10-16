@@ -1,0 +1,30 @@
+{
+  "name": "@tripsit/irc-client-web",
+  "private": true,
+  "version": "0.1.0",
+  "description": "",
+  "main": "./index.js",
+  "scripts": {
+    "start": "thelounge start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tripsit-me/irc-client-web.git"
+  },
+  "author": "SevenCats <snowcolton@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tripsit-me/irc-client-web/issues"
+  },
+  "homepage": "https://github.com/tripsit-me/irc-client-web#readme",
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "thelounge": "^4.2.0"
+  }
+}
