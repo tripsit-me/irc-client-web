@@ -1,7 +1,5 @@
 'use strict';
 
-require('dotenv').config();
-
 module.exports = {
 	// ## Server settings
 
@@ -35,7 +33,7 @@ module.exports = {
 	// Set the port to listen to.
 	//
 	// This value is set to `9000` by default.
-	port: parseInt(process.env.IRC_CLIENT_PORT, 10),
+	port: 9000,
 
 	// ### `bind`
 	//
@@ -51,7 +49,7 @@ module.exports = {
 	// and will honor the `X-Forwarded-For` header.
 	//
 	// This value is set to `false` by default.
-	reverseProxy: process.env.REVERSE_PROXY === 'true',
+	reverseProxy: true,
 
 	// ### `maxHistory`
 	//
@@ -80,10 +78,10 @@ module.exports = {
 	// The value of `enable` is set to `false` to disable HTTPS by default, in
 	// which case the other two string settings are ignored.
 	https: {
-		enable: !!process.env.HTTPS_KEY,
-		key: process.env.HTTPS_KEY,
-		certificate: process.env.HTTPS_CERTIFICATE,
-		ca: process.env.HTTPS_CA,
+		enable: false,
+		key: null,
+		certificate: null,
+		ca: null,
 	},
 
 	// ## Client settings
@@ -228,16 +226,16 @@ module.exports = {
 	// }
 	// ```
 	defaults: {
-		name: process.env.IRC_SERVER_NAME,
-		host: process.env.IRC_SERVER_HOST,
-		port: parseInt(process.env.IRC_SERVER_PORT, 10),
+		name: 'TripSit',
+		host: 'irc.tripsit.me',
+		port: 6697,
 		password: '',
 		tls: true,
 		rejectUnauthorized: false,
 		nick: 'Tripper%%%',
-		username: 'TheLoungeUser%%%',
-		realname: 'TheLoungeUser%%%',
-		join: process.env.IRC_CLIENT_AUTOJOIN,
+		username: '',
+		realname: '',
+		join: '#welcome,#tripsit,#tripsit1,#sanctuary,#drugs,#lounge',
 	},
 
 	// ### `displayNetwork`
@@ -463,12 +461,12 @@ module.exports = {
 		// When set to true, this enables extra debugging output provided by
 		// [`irc-framework`](https://github.com/kiwiirc/irc-framework), the
 		// underlying IRC library for Node.js used by The Lounge.
-		ircFramework: process.env.DEBUG_IRC_FRAMEWORK === 'true',
+		ircFramework: true,
 
 		// ### `debug.raw`
 		//
 		// When set to `true`, this enables logging of raw IRC messages into each
 		// server window, displayed on the client.
-		raw: process.env.DEBUG_RAW === 'true',
+		raw: true,
 	},
 };
