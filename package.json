@@ -5,7 +5,8 @@
   "description": "",
   "main": "./index.js",
   "scripts": {
-    "start": "thelounge start",
+    "start": "THELOUNGE_HOME=../.. thelounge start",
+    "dev": "THELOUNGE_HOME=../.. config thelounge start --dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "./scripts/postinstall.sh"
   },
@@ -25,7 +26,6 @@
     "eslint-plugin-import": "^2.22.1"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
     "thelounge": "^4.2.0"
   }
 }
