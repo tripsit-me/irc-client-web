@@ -79,9 +79,9 @@ module.exports = {
 	// which case the other two string settings are ignored.
 	https: {
 		enable: false,
-		key: null,
-		certificate: null,
-		ca: null,
+		key: '',
+		certificate: '',
+		ca: '',
 	},
 
 	// ## Client settings
